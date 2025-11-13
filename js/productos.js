@@ -1,0 +1,13 @@
+/**
+ *Dejo este archivo que me sirivio para copiar el texto y llevar al data/productos.json donde simule
+ una API como una db pero con datos estaticos
+ */
+    
+export const productos = [
+  { id: "1", nombre: "Casco Dolphins", img: ".img/dolphins.jpeg", precio: 199 },
+  { id: "2", nombre: "Casco Green Bay", img: ".img/gb.jpeg", precio: 199 },
+  { id: "3", nombre: "Casco Lions", img: ".img/lions.jpeg", precio: 199 },
+  { id: "4", nombre: "Casco San Francisco 49", img: ".img/sf49.jpeg", precio: 199 },
+  { id: "5", nombre: "Casco Steelers", img: ".img/steelers.jpeg", precio: 199 },
+  { id: "6", nombre: "Casco Vikings", img: ".img/vikings.jpeg", precio: 199 },
+];

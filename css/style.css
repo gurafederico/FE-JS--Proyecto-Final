@@ -1,0 +1,758 @@
+/* reset de css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* para que 1 rem = 10px */
+  font-size: 62.5%;
+}
+
+/* -------------------------------------------------------------------------- */
+/* generales de la web                                                          */
+/* -------------------------------------------------------------------------- */
+
+body {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  /* fondo principal */
+  background-color: #0d1a26;
+  /* texto principal */
+  color: #d1d5db;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  /* fondo del header */
+  background-color: #1a2c3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+.header__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.header__logo a {
+  /* enlace logo*/
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header__logo a:hover {
+  /* enlace logo hover */
+  color: #b2bec3;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.header__nav li {
+  font-weight: bold;
+  line-height: 1;
+}
+
+.header__nav a {
+  /* enlaces nav */
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+/* para que que el icono y el contador no se separen en dos lineas */
+.header__nav a.carrito-icono {
+  white-space: nowrap;
+}
+
+.header__nav a:hover {
+  /* enlace nav hover*/
+  color: #b2bec3;
+}
+
+.footer {
+  /* fondo del footer*/
+  background-color: #1a2c3d;
+  padding: 1.5rem;
+  /* texto del footer */
+  color: #ffffff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* estilos de botones (btns)                                                    */
+/* -------------------------------------------------------------------------- */
+
+.btn {
+  /* fondo del boton principal (agregar)*/
+  background-color: #c0392b;
+  /* texto del boton */
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover {
+  /* boton principal hover*/
+  background-color: #e74c3c;
+}
+
+.btn-eliminar-carrito {
+  /* fondo eliminar carrito*/
+  background-color: #34495e;
+  /* borde del boton */
+  border: 2px solid #c0392b;
+  /* texto del boton */
+  color: #ffffff;
+}
+
+.btn-vaciar-carrito {
+  /* fondo vaciar carrito*/
+  background-color: #f1c40f;
+  /* texto del boton */
+  color: #1a2c3d;
+
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-vaciar-carrito:hover {
+  /* vaciar carrito hover*/
+  background-color: #f39c12;
+}
+
+/* -------------------------------------------------------------------------- */
+/* estilos de la pagina de inicio (home)                                        */
+/* -------------------------------------------------------------------------- */
+
+main {
+  width: 90%;
+  flex: 1;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 2.8rem;
+  margin: 1.5rem 0;
+  /* color de titulos principales */
+  color: #e74c3c;
+}
+
+main .parrafo-home {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: 80%;
+}
+
+.productos-home {
+  width: 100%;
+}
+
+.productos-home h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 0.8rem;
+  margin: 2rem;
+  /* color de subtitulos de seccion */
+  color: #c0392b;
+}
+
+.contenedor-tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* estilo de tarjeta generica (usada en home - diseno vertical) */
+.tarjeta-producto {
+  /* fondo de las tarjetas */
+  background-color: #1a2c3d;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  width: 25rem;
+  /* texto de la tarjeta */
+  color: #d1d5db;
+
+  /* claves para el diseno vertical en home */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  /* sombra de la tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.tarjeta-producto h3 {
+  font-size: 2rem;
+}
+
+.tarjeta-producto p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  /* color del precio */
+  color: #f1c40f;
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* pagina de contacto                                                           */
+/* -------------------------------------------------------------------------- */
+
+.seccion-contacto {
+  width: 100%;
+  margin: 1.5rem auto;
+}
+
+.titulo-contacto {
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  /* color del titulo */
+  color: #e74c3c;
+}
+
+.form {
+  /* fondo del formulario */
+  background-color: #1a2c3d;
+  padding: 3.5rem;
+  border-radius: 0.8rem;
+
+  width: 50rem;
+
+  margin: auto;
+  /* color del texto del formulario */
+  color: #d1d5db;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.campo-form label {
+  font-size: 1.6rem;
+}
+.campo-form input,
+.campo-form textarea {
+  /* color del texto dentro de los campos */
+  color: #1a2c3d;
+  /* fondo de los campos de entrada */
+  background-color: #d1d5db;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form button {
+  /* fondo del boton de envio */
+  background-color: #c0392b;
+  /* texto del boton de envio */
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  /* fondo del boton de envio hover */
+  background-color: #e74c3c;
+}
+
+/* -------------------------------------------------------------------------- */
+/* pagina del carrito de compras                                                */
+/* -------------------------------------------------------------------------- */
+
+/* titulo del carrito*/
+main h1.titulo-carrito {
+  font-size: 2.8rem;
+
+  margin: 1.5rem 0 3rem 0;
+  color: #e74c3c;
+  white-space: normal;
+  text-align: center;
+  width: 100%;
+}
+
+/* contenedor principal del carrito para diseno de dos columnas */
+body.pagina-carrito main {
+  max-width: 1200px;
+  width: 90%;
+  margin: 1.5rem auto;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* contenedor de las tarjetas de productos en el carrito */
+#contenedor-carrito {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  /* contenido cuando esta vacio */
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  width: 100%;
+}
+
+/* estilo para las tarjetas individuales de productos en el carrito */
+main #contenedor-carrito .tarjeta-producto {
+  width: 100%;
+  background-color: #1a2c3d;
+  padding: 1rem;
+
+  /* distribuyo los elementos principales */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+  /* mantengo z-index para funcionalidad de botones */
+  position: relative;
+  z-index: 10;
+}
+
+main #contenedor-carrito .tarjeta-producto img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  width: auto;
+}
+
+/* contenedor para el titulo, precio cnitario, cantidad y subtotal */
+.producto-detalles {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.5rem;
+  min-width: 15rem;
+}
+
+/* contenedor flexible para el nombre del producto, precio unitario y subtotal, y controles */
+.info-producto-detalle {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 10rem;
+}
+
+main #contenedor-carrito .tarjeta-producto h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+/* contenedor para el precio unitario, subtotal y controles de cantidad */
+.contenedor-acciones-precio {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* precio unitario y el subtotal */
+.info-precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1rem;
+  min-width: 20rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+main #contenedor-carrito .tarjeta-producto .precio-unitario {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: #d1d5db;
+  flex-shrink: 0;
+  text-align: left;
+  line-height: 1.4;
+  margin: 0;
+}
+
+main #contenedor-carrito .tarjeta-producto .precio-unitario span {
+  font-weight: bold;
+  color: #f1c40f;
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+/*control de cantidad */
+.control-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.btn-cantidad {
+  background-color: #34495e;
+  color: #ffffff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cantidad:hover {
+  background-color: #4a6582;
+}
+
+.cantidad-actual {
+  font-size: 1.6rem;
+  font-weight: bold;
+  min-width: 2.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* contenedor para el subtotal */
+.info-precio p {
+  font-size: 1.3rem;
+  font-weight: normal;
+  line-height: 1.4;
+  margin: 0;
+  color: #d1d5db;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.info-precio p span {
+  font-weight: bold;
+  color: #f1c40f;
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+/* boton de eliminar */
+main #contenedor-carrito .tarjeta-producto .btn-eliminar-carrito {
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  margin-left: 1.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* mensaje de carrito vacio */
+
+.mensaje-carrito-vacio-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 500px;
+
+  text-align: center;
+  padding: 3rem;
+  background-color: #1a2c3d;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.mensaje-carrito-vacio {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #e74c3c;
+  white-space: nowrap;
+}
+
+/* boton ver productos */
+.mensaje-carrito-vacio-contenedor .btn {
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+/* boton de vaciar carrito */
+#acciones-carrito {
+  width: 100%;
+  display: none;
+  justify-content: flex-end;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  position: static;
+  z-index: auto;
+}
+
+/* seccion de resumen de la compra */
+#resumen-carrito {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #1a2c3d;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 2rem;
+}
+
+#resumen-carrito h3 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.resumen-compra p {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d1d5db;
+}
+
+.resumen-compra p span {
+  font-weight: bold;
+  color: #f1c40f;
+}
+
+.resumen-compra .btn-finalizar {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  background-color: #c0392b;
+  color: #ffffff;
+}
+
+/* -------------------------------------------------------------------------- */
+/* media queries para adaptacion a pantallas de distintos tamaño                */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .header__logo {
+    font-size: 1.8rem;
+  }
+
+  .header__nav a {
+    font-size: 1.8rem;
+  }
+
+  /* diseno de una sola columna para la pagina del carrito */
+  body.pagina-carrito main {
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    width: 90%;
+  }
+
+  /* titulo del carrito */
+  main h1.titulo-carrito {
+    white-space: normal;
+  }
+
+  #contenedor-carrito {
+    width: 100%;
+    min-height: auto;
+    align-items: stretch;
+  }
+
+  #acciones-carrito {
+    position: static;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    z-index: auto;
+    display: none;
+  }
+
+  #resumen-carrito {
+    width: 100%;
+    margin-top: 2rem;
+    position: static;
+    max-width: 100%;
+    min-width: auto;
+  }
+
+  /* la tarjeta del carrito */
+  main #contenedor-carrito .tarjeta-producto {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 0.8rem;
+    justify-content: center;
+    gap: 1.5rem;
+    z-index: auto;
+  }
+
+  /* imagen */
+  main #contenedor-carrito .tarjeta-producto img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  /* contenedor de detalles (nombre, precio, acciones) */
+  .producto-detalles {
+    width: 100%;
+    min-width: auto;
+    align-items: center;
+  }
+
+  /* titulo */
+  main #contenedor-carrito .tarjeta-producto h3 {
+    width: 100%;
+    flex-shrink: 1;
+    text-align: center;
+    margin: 0;
+    min-width: auto;
+  }
+
+  /* contenedor de acciones y precios */
+  .contenedor-acciones-precio {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  /* control de cantidad */
+  .control-cantidad {
+    width: 50%;
+    margin: 0.5rem auto;
+    flex-shrink: 1;
+    justify-content: center;
+  }
+
+  /* info precio */
+  .info-precio {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    min-width: auto;
+  }
+
+  /* precio unitario */
+  main #contenedor-carrito .tarjeta-producto .precio-unitario {
+    width: 50%;
+    margin: 0.5rem auto;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    flex-shrink: 1;
+  }
+
+  /* boton eliminar */
+  main #contenedor-carrito .tarjeta-producto .btn-eliminar-carrito {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 1.6rem;
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: auto;
+  }
+
+  /* ajuste para tarjetas de productos */
+  .tarjeta-producto {
+    width: 80%;
+  }
+
+  .contenedor-tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* formulario de contacto */
+  .form {
+    width: 90%;
+    min-width: auto;
+    margin: auto;
+  }
+
+  /* fuente para mensaje de carrito vacio */
+  .mensaje-carrito-vacio {
+    font-size: 2.5rem;
+    white-space: normal;
+  }
+}
